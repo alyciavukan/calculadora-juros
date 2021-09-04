@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--nome, mensalidade, tempo de contribuição, botão-->
+    <head>
+        <title>Simulador de Investimento</title>
+        <link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/coin-131982518676438146.png">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="calculadora.js" defer></script>
+    <style>
+        body {
+            height: 100%;
+            background-color: black;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container row d-flex justify-content-center mt-5">
+                <div class="mt-5 col-4">
+                        <form action="" id="formulario-juros" class="form-juros" method="post">
+                            <h1 class="text-warning fw-light"><img src="coin 3.gif" alt="coin" width="32" height="32"> Simulador de Investimento com Juros Composto</h1>
+                            <p></p>
+                            <div class="mb-3">
+                                <input type="text" class="border-1 rounded-3" placeholder="Nome completo" id="nome">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="border-1 rounded-3" placeholder="Valor da mensalidade" id="pmt">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="border-1 rounded-3" placeholder="Tempo de contribuição" id="n">
+                            </div>
+                            <button type="submite" onclick="calcular(); return false;" id="botaozinho" class="btn btn-warning">Calcular</button>
+                        </form>                                                                             
+                </div>
+            </div>
+        </div>
+        <div id="mostrar-resultado" class= "d-none container row d-flex justify-content-center mt-5">
+            <div class="mt-4 col-6">
+            <h1 class="text-white fw-light">Olá! Os dados calculados foram:</h1>
+            <div class="display-6 text-warning" id="nome-usuario"></div>
+            <div class="display-6 text-warning" id="mensalidade"></div>
+            <div class="display-6 text-warning" id="tempo-contribuicao"></div>
+            <div class="display-6 text-warning" id="valor-resultado"></div>
+            </div>
+        </div>
+    </body>
+</html>
